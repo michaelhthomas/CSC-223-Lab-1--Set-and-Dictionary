@@ -144,6 +144,7 @@ public class ArraySet<E> implements List<E>, Set<E>
 	public boolean retainAll(Collection<?> collection) {
 		boolean changed = false;
 		for (E item : _list) {
+			// checks if the collection contains the item in the arraylist
 			if (!collection.contains(item)) {
 				remove(item);
 				changed = true;
