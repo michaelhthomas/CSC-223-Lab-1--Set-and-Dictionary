@@ -1,17 +1,14 @@
 package utilities;
 
-import java.util.Collection;
-import java.util.Iterator;
-import java.util.List;
-import java.util.ListIterator;
-import java.util.Set;
+import java.util.*;
 
 public class ArraySet<E> implements List<E>, Set<E>
 {
+	protected ArrayList<E> _list;
 
 	public ArraySet()
 	{
-		// TODO Auto-generated constructor stub cat worms
+		_list = new ArrayList<E>();
 	}
 
 	@Override
