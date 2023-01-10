@@ -5,7 +5,6 @@ import java.util.*;
 public class ArraySet<E> implements List<E>, Set<E>
 {
 	protected ArrayList<E> _list;
-	// HORRIBLE MERGE CONFLICTS HAHAHA
 
 	public ArraySet()
 	{
@@ -62,8 +61,8 @@ public class ArraySet<E> implements List<E>, Set<E>
 	}
 
 	@Override
-	public E get(int intex) {
-		return _list.get(intex);
+	public E get(int index) {
+		return _list.get(index);
 	}
 
 	@Override
