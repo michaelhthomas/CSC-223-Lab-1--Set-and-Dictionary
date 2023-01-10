@@ -146,6 +146,7 @@ public class ArraySet<E> implements List<E>, Set<E>
 		for (E item : _list) {
 			// checks if the collection contains the item in the arraylist
 			if (!collection.contains(item)) {
+				// if so, the item is removed and the return value is set to true
 				remove(item);
 				changed = true;
 			}
