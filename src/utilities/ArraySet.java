@@ -91,14 +91,13 @@ public class ArraySet<E> implements List<E>, Set<E>
 
 	@Override
 	public Iterator<E> iterator() {
-		// TODO Auto-generated method stub
-		return null;
+		return _list.iterator();
 	}
 
 	@Override
 	public java.util.Spliterator<E> spliterator() {
-		return null;
-    }
+		return _list.spliterator();
+	}
 
 	@Override
 	public int lastIndexOf(Object element) {
@@ -108,14 +107,12 @@ public class ArraySet<E> implements List<E>, Set<E>
 
 	@Override
 	public ListIterator<E> listIterator() {
-		// TODO Auto-generated method stub
-		return null;
+		return listIterator();
 	}
 
 	@Override
-	public ListIterator<E> listIterator(int arg0) {
-		// TODO Auto-generated method stub
-		return null;
+	public ListIterator<E> listIterator(int index) {
+		return _list.listIterator(index);
 	}
 
 	@Override
