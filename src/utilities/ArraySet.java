@@ -55,10 +55,7 @@ public class ArraySet<E> implements List<E>, Set<E>
 
 	@Override
 	public boolean contains(Object element) {
-		for (E item : _list) {
-			if (item.equals(element)) return true;
-		}
-		return false;
+		return _list.contains(element);
 	}
 
 	@Override
@@ -136,7 +133,7 @@ public class ArraySet<E> implements List<E>, Set<E>
 
 	@Override
 	public int size() {
-		
+		return _list.size();
 	}
 
 	@Override
@@ -153,5 +150,4 @@ public class ArraySet<E> implements List<E>, Set<E>
 	public <T> T[] toArray(T[] arg0) {
 		
 	}
-
 }
