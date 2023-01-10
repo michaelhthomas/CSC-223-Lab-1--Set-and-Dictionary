@@ -73,15 +73,13 @@ public class ArraySet<E> implements List<E>, Set<E>
 	}
 
 	@Override
-	public int indexOf(Object arg0) {
-		// TODO Auto-generated method stub
-		return 0;
+	public int indexOf(Object element) {
+		return _list.indexOf(element);
 	}
 
 	@Override
 	public boolean isEmpty() {
-		// TODO Auto-generated method stub
-		return false;
+		return _list.isEmpty();
 	}
 
 	@Override
