@@ -48,11 +48,13 @@ public class ArraySet<E> implements List<E>, Set<E>
 
 	@Override
 	public void clear() {
+		// Clears the list of all items
 		_list.clear();
 	}
 
 	@Override
 	public boolean contains(Object element) {
+		// Checks if the list contains an item, respectively returning true or false
 		return _list.contains(element);
 	}
 
@@ -64,16 +66,19 @@ public class ArraySet<E> implements List<E>, Set<E>
 
 	@Override
 	public E get(int intex) {
+		// Gets the item at the specified index and returns it
 		return _list.get(intex);
 	}
 
 	@Override
 	public int indexOf(Object element) {
+		// Gets the index of the specified item and returns it
 		return _list.indexOf(element);
 	}
 
 	@Override
 	public boolean isEmpty() {
+		// Checks to see if the list is empty and respectively returns true or false
 		return _list.isEmpty();
 	}
 
@@ -85,16 +90,13 @@ public class ArraySet<E> implements List<E>, Set<E>
 
 	@Override
 	public java.util.Spliterator<E> spliterator() {
-    return null;
-  }
+		return null;
+    }
 
 	@Override
 	public int lastIndexOf(Object element) {
-		int max = 0;
-		for (int i = 0; i < _list.size(); i++) {
-			if (element.equals(_list.get(i))) max = i;
-		}
-		return max;
+		// Finds the last occurence of the element and returns the index
+		return _list.lastIndexOf(element);
 	}
 
 	@Override
@@ -111,11 +113,13 @@ public class ArraySet<E> implements List<E>, Set<E>
 
 	@Override
 	public boolean remove(Object item) {
+		// Removes the specified item and returnrs true or false respectivey
 		return _list.remove(item);
 	}
 
 	@Override
 	public E remove(int index) {
+		// Removes the itme at the specified index and returns true or false respectively
 		return _list.remove(index);
 	}
 
@@ -136,6 +140,7 @@ public class ArraySet<E> implements List<E>, Set<E>
 
 	@Override
 	public int size() {
+		// Returns the number of elements in the list
 		return _list.size();
 	}
 
