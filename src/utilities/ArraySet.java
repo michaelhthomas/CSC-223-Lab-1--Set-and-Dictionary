@@ -146,8 +146,11 @@ public class ArraySet<E> implements List<E>, Set<E>
 	}
 
 	@Override
-	public E set(int arg0, E arg1) {
-		
+	public E set(int index, E item) {
+		// if item is already in the set, do nothing
+		if (contains(item)) return null;
+		// else we should be ok to set the item
+		return _list.set(index, item);
 	}
 
 	@Override
