@@ -90,7 +90,11 @@ public class ArraySet<E> implements List<E>, Set<E>
 
 	@Override
 	public int lastIndexOf(Object element) {
-		
+		int max = 0;
+		for (int i = 0; i < _list.size(); i++) {
+			if (element.equals(_list.get(i))) max = i;
+		}
+		return max;
 	}
 
 	@Override
