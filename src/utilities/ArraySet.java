@@ -5,6 +5,7 @@ import java.util.*;
 public class ArraySet<E> implements List<E>, Set<E>
 {
 	protected ArrayList<E> _list;
+	// HORRIBLE MERGE CONFLICTS HAHAHA
 
 	public ArraySet()
 	{
@@ -47,14 +48,12 @@ public class ArraySet<E> implements List<E>, Set<E>
 
 	@Override
 	public void clear() {
-		// TODO Auto-generated method stub
-		
+		_list.clear();
 	}
 
 	@Override
-	public boolean contains(Object arg0) {
-		// TODO Auto-generated method stub
-		return false;
+	public boolean contains(Object element) {
+		return _list.contains(element);
 	}
 
 	@Override
@@ -64,21 +63,18 @@ public class ArraySet<E> implements List<E>, Set<E>
 	}
 
 	@Override
-	public E get(int arg0) {
-		// TODO Auto-generated method stub
-		return null;
+	public E get(int intex) {
+		return _list.get(intex);
 	}
 
 	@Override
-	public int indexOf(Object arg0) {
-		// TODO Auto-generated method stub
-		return 0;
+	public int indexOf(Object element) {
+		return _list.indexOf(element);
 	}
 
 	@Override
 	public boolean isEmpty() {
-		// TODO Auto-generated method stub
-		return false;
+		return _list.isEmpty();
 	}
 
 	@Override
@@ -93,9 +89,12 @@ public class ArraySet<E> implements List<E>, Set<E>
   }
 
 	@Override
-	public int lastIndexOf(Object arg0) {
-		// TODO Auto-generated method stub
-		return 0;
+	public int lastIndexOf(Object element) {
+		int max = 0;
+		for (int i = 0; i < _list.size(); i++) {
+			if (element.equals(_list.get(i))) max = i;
+		}
+		return max;
 	}
 
 	@Override
@@ -111,57 +110,47 @@ public class ArraySet<E> implements List<E>, Set<E>
 	}
 
 	@Override
-	public boolean remove(Object arg0) {
-		// TODO Auto-generated method stub
-		return false;
+	public boolean remove(Object item) {
+		return _list.remove(item);
 	}
 
 	@Override
-	public E remove(int arg0) {
-		// TODO Auto-generated method stub
-		return null;
+	public E remove(int index) {
+		return _list.remove(index);
 	}
 
 	@Override
 	public boolean removeAll(Collection<?> arg0) {
-		// TODO Auto-generated method stub
-		return false;
+		
 	}
 
 	@Override
 	public boolean retainAll(Collection<?> arg0) {
-		// TODO Auto-generated method stub
-		return false;
+		
 	}
 
 	@Override
 	public E set(int arg0, E arg1) {
-		// TODO Auto-generated method stub
-		return null;
+		
 	}
 
 	@Override
 	public int size() {
-		// TODO Auto-generated method stub
-		return 0;
+		return _list.size();
 	}
 
 	@Override
 	public List<E> subList(int arg0, int arg1) {
-		// TODO Auto-generated method stub
-		return null;
+		
 	}
 
 	@Override
 	public Object[] toArray() {
-		// TODO Auto-generated method stub
-		return null;
+		
 	}
 
 	@Override
 	public <T> T[] toArray(T[] arg0) {
-		// TODO Auto-generated method stub
-		return null;
+		
 	}
-
 }
