@@ -101,7 +101,7 @@ public class ArraySet<E> implements List<E>, Set<E>
 
 	@Override
 	public int lastIndexOf(Object element) {
-		// Finds the last occurence of the element and returns the index
+		// Finds the last occurrence of the element and returns the index
 		return _list.lastIndexOf(element);
 	}
 
@@ -117,13 +117,13 @@ public class ArraySet<E> implements List<E>, Set<E>
 
 	@Override
 	public boolean remove(Object item) {
-		// Removes the specified item and returnrs true or false respectivey
+		// Removes the specified item and returns true or false respectively
 		return _list.remove(item);
 	}
 
 	@Override
 	public E remove(int index) {
-		// Removes the itme at the specified index and returns true or false respectively
+		// Removes the item at the specified index and returns true or false respectively
 		return _list.remove(index);
 	}
 
