@@ -5,7 +5,6 @@ import java.util.*;
 public class ArraySet<E> implements List<E>, Set<E>
 {
 	protected ArrayList<E> _list;
-	// HORRIBLE MERGE CONFLICTS HAHAHA
 
 	public ArraySet()
 	{
