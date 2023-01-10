@@ -120,7 +120,7 @@ public class ArraySet<E> implements List<E>, Set<E>
 
 	@Override
 	public boolean remove(Object item) {
-		// Removes the specified item and returnrs true or false respectivey
+		// Removes the specified item and returns true or false respectivey
 		return _list.remove(item);
 	}
 
