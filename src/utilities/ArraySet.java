@@ -134,7 +134,7 @@ public class ArraySet<E> implements List<E>, Set<E>
 	public boolean removeAll(Collection<?> collection) {
 		boolean changed = false;
 		for (Object item : collection) {
-			// if the itme is removed, the changed boolean is set to true
+			// if the item is removed, the changed boolean is set to true
 			if (collection.remove(item) == true) changed = true;
 		}
 		return changed;
