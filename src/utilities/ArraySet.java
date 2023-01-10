@@ -142,7 +142,9 @@ public class ArraySet<E> implements List<E>, Set<E>
 
 	@Override
 	public boolean retainAll(Collection<?> collection) {
-		
+		for (E item : _list) {
+			if (!collection.contains(item)) remove(item);
+		}
 	}
 
 	@Override
