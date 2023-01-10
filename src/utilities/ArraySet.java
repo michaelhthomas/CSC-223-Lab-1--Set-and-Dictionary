@@ -152,17 +152,17 @@ public class ArraySet<E> implements List<E>, Set<E>
 	}
 
 	@Override
-	public List<E> subList(int arg0, int arg1) {
-		
+	public List<E> subList(int fromIndex, int toIndex) {
+		return _list.subList(fromIndex, toIndex);
 	}
 
 	@Override
 	public Object[] toArray() {
-		
+		return _list.toArray();
 	}
 
 	@Override
-	public <T> T[] toArray(T[] arg0) {
-		
+	public <T> T[] toArray(T[] a) {
+		return _list.toArray(a);
 	}
 }
