@@ -102,7 +102,7 @@ public class ArraySet<E> implements List<E>, Set<E>
 
 	@Override
 	public int lastIndexOf(Object element) {
-		// Finds the last occurence of the element and returns the index
+		// Finds the last occurrence of the element and returns the index
 		return _list.lastIndexOf(element);
 	}
 
