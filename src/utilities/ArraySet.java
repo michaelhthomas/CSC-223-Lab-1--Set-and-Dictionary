@@ -41,8 +41,18 @@ public class ArraySet<E> implements List<E>, Set<E>
 
 	@Override
 	public boolean addAll(int index, Collection<? extends E> collection) {
-		// TODO Auto-generated method stub
-		return false;
+		boolean changed = false;
+		int i = index;
+		for (E item : collection) {
+			if (!contains(item)) {
+				// we have changed the list
+				changed = true;
+				add(i, item);
+				// increment the index
+				i++;
+			}
+		}
+		return changed;
 	}
 
 	@Override
