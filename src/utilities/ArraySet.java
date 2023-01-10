@@ -12,37 +12,35 @@ public class ArraySet<E> implements List<E>, Set<E>
 	}
 
 	@Override
-	public boolean add(E arg0) {
-		// TODO Auto-generated method stub
-		return false;
+	public boolean add(E item) {
+		// Do not add the item if it is already contained in the list
+		if (contains(item)) return false;
+		// Otherwise, add the item
+		_list.add(item);
+		return true;
 	}
 
 	@Override
-	public boolean addAll(Collection<? extends E> arg0) {
-		// TODO Auto-generated method stub
-		return false;
+	public boolean addAll(Collection<? extends E> collection) {
+		boolean changed = false;
+		for (E item : collection) {
+			// add the item, update changed if item was added successfully
+			if (add(item) == true) 
+				changed = true;
+		}
+		return changed;
 	}
 
 	@Override
-	public boolean add(E arg0) {
-		// TODO Auto-generated method stub
-		return false;
+	public void add(int index, E item) {
+		// Do not add the item if it is already contained in the list
+		if(contains(item)) return;
+		// Otherwise, add the item
+		_list.add(index, item);
 	}
 
 	@Override
-	public void add(int arg0, E arg1) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public boolean addAll(Collection<? extends E> arg0) {
-		// TODO Auto-generated method stub
-		return false;
-	}
-
-	@Override
-	public boolean addAll(int arg0, Collection<? extends E> arg1) {
+	public boolean addAll(int index, Collection<? extends E> collection) {
 		// TODO Auto-generated method stub
 		return false;
 	}
@@ -88,6 +86,11 @@ public class ArraySet<E> implements List<E>, Set<E>
 		// TODO Auto-generated method stub
 		return null;
 	}
+
+	@Override
+	public java.util.Spliterator<E> spliterator() {
+    return null;
+  }
 
 	@Override
 	public int lastIndexOf(Object arg0) {
