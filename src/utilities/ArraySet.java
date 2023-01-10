@@ -126,7 +126,7 @@ public class ArraySet<E> implements List<E>, Set<E>
 
 	@Override
 	public E remove(int index) {
-		// Removes the itme at the specified index and returns true or false respectively
+		// Removes the item at the specified index and returns true or false respectively
 		return _list.remove(index);
 	}
 
