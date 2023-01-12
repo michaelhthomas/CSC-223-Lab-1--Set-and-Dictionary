@@ -4,10 +4,13 @@ import java.util.*;
 
 public class ParallelArrayDictionary<Key, Value> implements Map<Key, Value>
 {
+	protected ArraySet<Key> _keys;
+	protected ArrayList<Value> _values;
 
 	public ParallelArrayDictionary()
 	{
-		// TODO Auto-generated constructor stub (thomas)
+		_keys = new ArraySet<>();
+		_values = new ArrayList<>();
 	}
 
 	@Override
