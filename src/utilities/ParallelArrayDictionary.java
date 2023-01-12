@@ -63,8 +63,8 @@ public class ParallelArrayDictionary<Key, Value> implements Map<Key, Value>
 
 	@Override
 	public void clear() {
-		// TODO Auto-generated method stub (thomas)
-		
+		_keys.clear();
+		_values.clear();
 	}
 
 	@Override
