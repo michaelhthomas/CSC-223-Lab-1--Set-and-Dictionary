@@ -69,20 +69,26 @@ public class ParallelArrayDictionary<Key, Value> implements Map<Key, Value>
 
 	@Override
 	public Set<Key> keySet() {
-		// TODO Auto-generated method stub (thomas)
-		return null;
+		return _keys;
 	}
 
 	@Override
 	public Collection<Value> values() {
-		// TODO Auto-generated method stub (thomas)
-		return null;
+		return _values;
 	}
 
 	@Override
 	public Set<Entry<Key, Value>> entrySet() {
-		// TODO Auto-generated method stub (thomas)
-		return null;
+		Set<Entry<Key, Value>> entrySet = new ArraySet<>();
+
+		for (int i = 0; i < _keys.size(); i++) {
+			Key key = _keys.get(i);
+			Value val = _values.get(i);
+
+			entrySet.add(new AbstractMap.SimpleEntry<Key, Value>(key, val));
+		}
+
+		return entrySet;
 	}
 
 }
