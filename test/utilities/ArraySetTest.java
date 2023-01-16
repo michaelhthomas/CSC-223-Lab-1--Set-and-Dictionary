@@ -30,15 +30,13 @@ class ArraySetTest
 	};
 
 	@Test
-	void testArraySetCollectionOfE()
-	{
+	void testArraySetCollectionOfE() {
 		ArraySet<String> test = new ArraySet<>();
 		// not really sure what he wants us to do here
 	}
 
 	@Test
-	void testAddE()
-	{
+	void testAddE() {
 		ArraySet<String> test = new ArraySet<>();
 
 		// add all test items
@@ -53,22 +51,22 @@ class ArraySetTest
 	}
 
 	@Test
-	void testAddAllCollectionOfQextendsE()
-	{
+	void testAddAllCollectionOfQextendsE() {
+		
 	}
 
 	@Test
-	void testRetainAll()
-	{
+	void testRetainAll() {
+		
 	}
 
 	@Test
-	void testRemoveAll()
-	{
+	void testRemoveAll() {
+		
 	}
 
 	@Test
-	void testAddAllIntCollectionOfQextendsE()
-	{
+	void testAddAllIntCollectionOfQextendsE() {
+		
 	}
 }
