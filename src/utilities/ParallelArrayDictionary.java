@@ -15,49 +15,57 @@ public class ParallelArrayDictionary<Key, Value> implements Map<Key, Value>
 
 	@Override
 	public int size() {
-		// TODO Auto-generated method stub (leiby)
-		return 0;
+		return _keys.size();
 	}
 
 	@Override
 	public boolean isEmpty() {
-		// TODO Auto-generated method stub (leiby)
-		return false;
+		return _keys.isEmpty();
 	}
 
 	@Override
 	public boolean containsKey(Object key) {
-		// TODO Auto-generated method stub (leiby)
-		return false;
+		return _keys.contains(key);
 	}
 
 	@Override
 	public boolean containsValue(Object value) {
-		// TODO Auto-generated method stub (leiby)
-		return false;
+		return _values.contains(value);
 	}
 
 	@Override
 	public Value get(Object key) {
-		// TODO Auto-generated method stub (leiby)
+		// returns the value associated with the key if the key is contained within the dictionary
+		if (_keys.contains(key)) return _values.get(_keys.indexOf(key));
 		return null;
 	}
 
 	@Override
 	public Value put(Key key, Value value) {
-		// TODO Auto-generated method stub (leiby)
-		return null;
+		if (_keys.contains(key)) {
+			_values.set(_keys.indexOf(key), value);
+			return value;
+		}
+		
+		_keys.add(key);
+		_values.add(value);
+		return value;
 	}
 
 	@Override
 	public Value remove(Object key) {
-		// TODO Auto-generated method stub (leiby)
-		return null;
+		if (_keys.contains(key) == false) return null;
+		
+		// stores the value, removes the value and key from the dictionary, removes the value
+		Value temp = _values.get(_keys.indexOf(key));
+		_values.remove(_values.get(_keys.indexOf(key)));
+		_keys.remove(key);
+		return temp;
 	}
 
 	@Override
 	public void putAll(Map<? extends Key, ? extends Value> m) {
-		// TODO Auto-generated method stub (thomas)
+		
 		
 	}
 
