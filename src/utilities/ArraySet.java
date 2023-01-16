@@ -432,7 +432,7 @@ public class ArraySet<E> implements List<E>, Set<E>
 		boolean changed = false;
 		for (Object e : collection) {
 			// if the e is removed, the changed boolean is set to true
-			if (collection.remove(e) == true) changed = true;
+			if (remove(e) == true) changed = true;
 		}
 		return changed;
 	}

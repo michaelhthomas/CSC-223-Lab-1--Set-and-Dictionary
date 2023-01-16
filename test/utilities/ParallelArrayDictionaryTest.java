@@ -6,7 +6,7 @@ class ParallelArrayDictionaryTest
 {
 	@Test
 	void testParallelArrayDictionary() {
-		
+		ParallelArrayDictionary dingus = new ParallelArrayDictionary();
 	}
 
 	@Test
