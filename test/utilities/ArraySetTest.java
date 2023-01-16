@@ -99,6 +99,14 @@ class ArraySetTest
 
 	@Test
 	void testAddAllIntCollectionOfQextendsE() {
+		ArraySet<Integer> test = new ArraySet<>();
+
+		test.addAll(List.of(1, 2, 3, 4, 5, 6, 1, 2, 3));
 		
+		// make sure duplicate keys are removed
+		assertEquals(6, test.size());
+
+		// make sure the lists are equal
+		assertEquals(List.of(1, 2, 3, 4, 5, 6), test._list);
 	}
 }
