@@ -5,32 +5,26 @@ import org.junit.jupiter.api.Test;
 class ParallelArrayDictionaryTest
 {
 	@Test
-	void testParallelArrayDictionary()
-	{
+	void testParallelArrayDictionary() {
 	}
 
 	@Test
-	void testGet()
-	{
+	void testGet() {
 	}
 
 	@Test
-	void testPut()
-	{
+	void testPut() {
 	}
 
 	@Test
-	void testRemove()
-	{
+	void testRemove() {
 	}
 
 	@Test
-	void testPutAll()
-	{
+	void testPutAll() {
 	}
 
 	@Test
-	void testClear()
-	{
+	void testClear() {
 	}
 }

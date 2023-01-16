@@ -6,8 +6,7 @@ public class ArraySet<E> implements List<E>, Set<E>
 {
 	protected ArrayList<E> _list;
 
-	public ArraySet()
-	{
+	public ArraySet() {
 		_list = new ArrayList<E>();
 	}
 
@@ -15,8 +14,7 @@ public class ArraySet<E> implements List<E>, Set<E>
 	 * Creates a new ArraySet and pre-populates it with the items in the 
 	 * given collection.
 	 */
-	public ArraySet(Collection<? extends E> collection)
-	{
+	public ArraySet(Collection<? extends E> collection) {
 		this();
 		addAll(collection);
 	}
@@ -383,8 +381,7 @@ public class ArraySet<E> implements List<E>, Set<E>
 	 * (<a href="Collection.html#optional-restrictions">optional</a>)
 	 * @throws NullPointerException if the specified element is null and this
 	 *         list does not permit null elements
-	 * (<a href="Collection.html#optional-restrictions">optional</a>)
-	 * @throws UnsupportedOperationException if the {@code remove} operation
+	 * (<a href="Collection.html#optional-restrictions">optional</a>) {@code remove} operation
 	 *         is not supported by this list
 	 */
 	@Override
