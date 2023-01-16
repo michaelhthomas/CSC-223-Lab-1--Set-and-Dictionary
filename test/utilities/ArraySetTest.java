@@ -32,8 +32,7 @@ class ArraySetTest
 	};
 
 	@Test
-	void testArraySetCollectionOfE()
-	{
+	void testArraySetCollectionOfE() {
 		ArraySet<String> test = new ArraySet<>(Arrays.asList(testItems));
 		
 		// make sure duplicate keys are removed
