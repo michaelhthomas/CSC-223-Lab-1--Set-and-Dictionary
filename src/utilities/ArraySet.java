@@ -11,6 +11,16 @@ public class ArraySet<E> implements List<E>, Set<E>
 		_list = new ArrayList<E>();
 	}
 
+	/*
+	 * Creates a new ArraySet and pre-populates it with the items in the 
+	 * given collection.
+	 */
+	public ArraySet(Collection<? extends E> collection)
+	{
+		this();
+		addAll(collection);
+	}
+
 	/**
 	 * Adds the specified element to this set if it is not already present
 	 * (optional operation).  More formally, adds the specified element

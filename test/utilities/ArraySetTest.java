@@ -3,6 +3,8 @@ package utilities;
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
+import java.util.Arrays;
+
 import org.junit.jupiter.api.Test;
 
 class ArraySetTest
@@ -30,9 +32,15 @@ class ArraySetTest
 	};
 
 	@Test
-	void testArraySetCollectionOfE() {
-		ArraySet<String> test = new ArraySet<>();
-		// not really sure what he wants us to do here
+	void testArraySetCollectionOfE()
+	{
+		ArraySet<String> test = new ArraySet<>(Arrays.asList(testItems));
+		
+		// make sure duplicate keys are removed
+		assertEquals(testItemsSet.length, test.size());
+
+		// make sure the lists are equal
+		assertArrayEquals(testItemsSet, test._list.toArray());
 	}
 
 	@Test
