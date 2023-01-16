@@ -1,7 +1,6 @@
 package utilities;
 
-import static org.junit.jupiter.api.Assertions.assertArrayEquals;
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.*;
 
 import java.util.Arrays;
 import java.util.List;
@@ -86,7 +85,16 @@ class ArraySetTest
 
 	@Test
 	void testRemoveAll() {
+		ArraySet<String> test = new ArraySet<>(Arrays.asList(testItems));
+
+		List<String> removeItems = List.of("shark", "whale", "dog");
 		
+		test.removeAll(removeItems);
+
+		assertEquals(3, test.size());
+
+		for (String item : removeItems)
+			assertFalse(test.contains(item));
 	}
 
 	@Test
