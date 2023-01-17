@@ -86,11 +86,59 @@ class ParallelArrayDictionaryTest
 
 	@Test
 	void testPutAll() {
+		ParallelArrayDictionary<Integer, String> pad = new ParallelArrayDictionary<>();
 		
+		ParallelArrayDictionary<Integer, String> anotherPAD = new ParallelArrayDictionary<>();
+		anotherPAD.put(6,  "dingus");
+		anotherPAD.put(7,  "an kitchen table");
+		anotherPAD.put(8,  "is it gif or jif?");
+		anotherPAD.put(9,  "purple telletubby");
+		anotherPAD.put(10,  "this is the last one, i promise");
+		
+		pad.putAll(anotherPAD);
+		
+		assertEquals(5, pad.size());
+		
+		pad.put(1,  "github took a dump today");
+		pad.put(2,  "Dr. Alvin");
+		pad.put(3,  "igloo");
+		pad.put(4,  "alienware");
+		pad.put(5,  "eclipse");
+		
+		assertEquals(10, pad.size());
+		
+		pad.clear();
+		
+		pad.put(1,  "github took a dump today");
+		pad.put(2,  "Dr. Alvin");
+		pad.put(3,  "igloo");
+		pad.put(4,  "alienware");
+		pad.put(5,  "eclipse");
+		
+		pad.putAll(anotherPAD);
+		
+		assertEquals(10, pad.size());
 	}
 
 	@Test
 	void testClear() {
+		ParallelArrayDictionary<Integer, String> pad = new ParallelArrayDictionary<>();
+		pad.put(1,  "github took a dump today");
+		pad.put(2,  "Dr. Alvin");
+		pad.put(3,  "igloo");
+		pad.put(4,  "alienware");
+		pad.put(5,  "eclipse");
 		
+		assertEquals(5, pad.size());
+		
+		pad.clear();
+		
+		assertEquals(0, pad.size());
+		
+		pad.put(1,  "test");
+		
+		pad.clear();
+		
+		assertEquals(0, pad.size());
 	}
 }
