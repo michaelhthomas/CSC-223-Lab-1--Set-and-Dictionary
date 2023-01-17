@@ -6,6 +6,22 @@ import org.junit.jupiter.api.Test;
 
 class ParallelArrayDictionaryTest
 {
+	void addTestItems(ParallelArrayDictionary<Integer, String> dict) {
+		dict.put(1,  "github took a dump today");
+		dict.put(2,  "Dr. Alvin");
+		dict.put(3,  "igloo");
+		dict.put(4,  "alienware");
+		dict.put(5,  "eclipse");
+	}
+
+	void addMoreTestItems(ParallelArrayDictionary<Integer, String> dict) {
+		dict.put(6,  "dingus");
+		dict.put(7,  "an kitchen table");
+		dict.put(8,  "is it gif or jif?");
+		dict.put(9,  "purple telletubby");
+		dict.put(10,  "this is the last one, i promise");
+	}
+
 	@Test
 	void testParallelArrayDictionary() {
 		ParallelArrayDictionary<Integer, Integer> dingus = new ParallelArrayDictionary<>();
@@ -39,11 +55,7 @@ class ParallelArrayDictionaryTest
 	@Test
 	void testGet() {
 		ParallelArrayDictionary<Integer, String> pad = new ParallelArrayDictionary<>();
-		pad.put(1,  "github took a dump today");
-		pad.put(2,  "Dr. Alvin");
-		pad.put(3,  "igloo");
-		pad.put(4,  "alienware");
-		pad.put(5,  "eclipse");
+		addTestItems(pad);
 		
 		assertEquals("github took a dump today", pad.get(1));
 		
@@ -63,11 +75,7 @@ class ParallelArrayDictionaryTest
 	@Test
 	void testRemove() {
 		ParallelArrayDictionary<Integer, String> pad = new ParallelArrayDictionary<>();
-		pad.put(1,  "github took a dump today");
-		pad.put(2,  "Dr. Alvin");
-		pad.put(3,  "igloo");
-		pad.put(4,  "alienware");
-		pad.put(5,  "eclipse");
+		addTestItems(pad);
 		
 		assertEquals("github took a dump today", pad.remove(1));
 		
@@ -89,31 +97,19 @@ class ParallelArrayDictionaryTest
 		ParallelArrayDictionary<Integer, String> pad = new ParallelArrayDictionary<>();
 		
 		ParallelArrayDictionary<Integer, String> anotherPAD = new ParallelArrayDictionary<>();
-		anotherPAD.put(6,  "dingus");
-		anotherPAD.put(7,  "an kitchen table");
-		anotherPAD.put(8,  "is it gif or jif?");
-		anotherPAD.put(9,  "purple telletubby");
-		anotherPAD.put(10,  "this is the last one, i promise");
+		addMoreTestItems(anotherPAD);
 		
 		pad.putAll(anotherPAD);
 		
 		assertEquals(5, pad.size());
 		
-		pad.put(1,  "github took a dump today");
-		pad.put(2,  "Dr. Alvin");
-		pad.put(3,  "igloo");
-		pad.put(4,  "alienware");
-		pad.put(5,  "eclipse");
+		addTestItems(pad);
 		
 		assertEquals(10, pad.size());
 		
 		pad.clear();
 		
-		pad.put(1,  "github took a dump today");
-		pad.put(2,  "Dr. Alvin");
-		pad.put(3,  "igloo");
-		pad.put(4,  "alienware");
-		pad.put(5,  "eclipse");
+		addTestItems(pad);
 		
 		pad.putAll(anotherPAD);
 		
@@ -123,11 +119,7 @@ class ParallelArrayDictionaryTest
 	@Test
 	void testClear() {
 		ParallelArrayDictionary<Integer, String> pad = new ParallelArrayDictionary<>();
-		pad.put(1,  "github took a dump today");
-		pad.put(2,  "Dr. Alvin");
-		pad.put(3,  "igloo");
-		pad.put(4,  "alienware");
-		pad.put(5,  "eclipse");
+		addTestItems(pad);
 		
 		assertEquals(5, pad.size());
 		
