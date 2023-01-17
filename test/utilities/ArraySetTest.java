@@ -1,9 +1,5 @@
 /**
-* Write a succinct, meaningful description of the class here. You should avoid wordiness
-* and redundancy. If necessary, additional paragraphs should be preceded by <p>,
-* the html tag for a new paragraph.
-*
-* <p>Bugs: (a list of bugs and / or other problems)
+* Tests for the ArraySet class.
 *
 * @author Michael Thomas
 * @date January 17, 2023

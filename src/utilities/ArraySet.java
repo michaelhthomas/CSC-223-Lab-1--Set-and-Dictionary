@@ -1,7 +1,6 @@
 /**
-* 
-*
-* <p>Bugs: (a list of bugs and / or other problems)
+* Implements an ArrayList-based set class which wraps an ArrayList and
+* adds Set-specific logic.
 *
 * @author Michael Leiby, Michael Thomas
 * @date January 17, 2023
