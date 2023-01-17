@@ -58,6 +58,23 @@ class ArraySetTest
 	}
 
 	@Test
+	void testAddEDoubles() {
+		ArraySet<Double> test = new ArraySet<>();
+
+		List<Double> testDoubles = List.of(1.0, Math.PI, 2.00, Math.PI);
+
+		// add all test items
+		for (Double item : testDoubles)
+			test.add(item);
+
+		// make sure duplicate keys are removed
+		assertEquals(3, test.size());
+
+		// make sure the lists are equal
+		assertEquals(List.of(1.0, Math.PI, 2.00), test._list);
+	}
+
+	@Test
 	void testAddAllCollectionOfQextendsE() {
 		ArraySet<String> test = new ArraySet<>();
 
