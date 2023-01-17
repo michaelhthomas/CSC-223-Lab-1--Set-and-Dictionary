@@ -1,6 +1,7 @@
 /**
 * 
-*
+* Implements a set-based ParallelArrayDictionary, using an arraylist for the keys and the
+* values.  implements methods for modifying and getting data about the dictionaryh
 *
 * @author Michael Leiby, Michael Thomas
 * @date January 17, 2023

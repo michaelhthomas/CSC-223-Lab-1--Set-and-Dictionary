@@ -1,6 +1,5 @@
 /**
-* 
-*
+* tests for the parallelarraydictionary class
 *
 * @author Michael Leiby
 * @date January 17, 2023
