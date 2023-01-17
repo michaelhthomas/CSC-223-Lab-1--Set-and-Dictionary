@@ -95,8 +95,10 @@ class ArraySetTest
 		
 		test.retainAll(retainItems);
 
+		// make sure only three items were preserved
 		assertEquals(3, test.size());
 
+		// make sure the test items match
 		assertEquals(retainItems, test._list);
 	}
 
@@ -108,8 +110,10 @@ class ArraySetTest
 		
 		test.removeAll(removeItems);
 
+		// make sure there are only three values remaining
 		assertEquals(3, test.size());
 
+		// make sure all of the specified values are no longer present
 		for (String item : removeItems)
 			assertFalse(test.contains(item));
 	}
