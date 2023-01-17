@@ -43,10 +43,10 @@ class ArraySetTest
 		ArraySet<String> test = new ArraySet<>(Arrays.asList(testItems));
 		
 		// make sure duplicate keys are removed
-		assertEquals(testItemsSet.length, test.size());
+		assertEquals(testItemsSet.length, test.size(), "duplicate keys were not removed");
 
 		// make sure the lists are equal
-		assertArrayEquals(testItemsSet, test._list.toArray());
+		assertArrayEquals(testItemsSet, test._list.toArray(), "items in set do not match expected value");
 	}
 
 	@Test
@@ -58,10 +58,10 @@ class ArraySetTest
 			test.add(item);
 
 		// make sure duplicate keys are removed
-		assertEquals(testItemsSet.length, test.size());
+		assertEquals(testItemsSet.length, test.size(), "duplicate keys were not removed");
 
 		// make sure the lists are equal
-		assertArrayEquals(testItemsSet, test._list.toArray());
+		assertArrayEquals(testItemsSet, test._list.toArray(), "items in set do not match expected value");
 	}
 
 	@Test
@@ -75,10 +75,10 @@ class ArraySetTest
 			test.add(item);
 
 		// make sure duplicate keys are removed
-		assertEquals(3, test.size());
+		assertEquals(3, test.size(), "duplicate keys were not removed");
 
 		// make sure the lists are equal
-		assertEquals(List.of(1.0, Math.PI, 2.00), test._list);
+		assertEquals(List.of(1.0, Math.PI, 2.00), test._list, "items in set do not match expected value");
 	}
 
 	@Test
@@ -88,10 +88,10 @@ class ArraySetTest
 		test.addAll(Arrays.asList(testItems));
 		
 		// make sure duplicate keys are removed
-		assertEquals(testItemsSet.length, test.size());
+		assertEquals(testItemsSet.length, test.size(), "duplicate keys were not removed");
 
 		// make sure the lists are equal
-		assertArrayEquals(testItemsSet, test._list.toArray());
+		assertArrayEquals(testItemsSet, test._list.toArray(), "items in set do not match expected value");
 	}
 
 	@Test
@@ -103,10 +103,10 @@ class ArraySetTest
 		test.retainAll(retainItems);
 
 		// make sure only three items were preserved
-		assertEquals(3, test.size());
+		assertEquals(3, test.size(), "incorrect amount of items preserved");
 
 		// make sure the test items match
-		assertEquals(retainItems, test._list);
+		assertEquals(retainItems, test._list, "items in set do not match expected value");
 	}
 
 	@Test
@@ -118,11 +118,11 @@ class ArraySetTest
 		test.removeAll(removeItems);
 
 		// make sure there are only three values remaining
-		assertEquals(3, test.size());
+		assertEquals(3, test.size(), "incorrect amount of items remaining");
 
 		// make sure all of the specified values are no longer present
 		for (String item : removeItems)
-			assertFalse(test.contains(item));
+			assertFalse(test.contains(item), "removed items were still present in the set");
 	}
 
 	@Test
@@ -132,9 +132,9 @@ class ArraySetTest
 		test.addAll(List.of(1, 2, 3, 4, 5, 6, 1, 2, 3));
 		
 		// make sure duplicate keys are removed
-		assertEquals(6, test.size());
+		assertEquals(6, test.size(), "duplicate keys were not removed");
 
 		// make sure the lists are equal
-		assertEquals(List.of(1, 2, 3, 4, 5, 6), test._list);
+		assertEquals(List.of(1, 2, 3, 4, 5, 6), test._list, "items in set do not match expected value");
 	}
 }
