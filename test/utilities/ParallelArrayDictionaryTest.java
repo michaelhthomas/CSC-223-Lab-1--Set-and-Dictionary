@@ -1,7 +1,6 @@
 /**
 * 
 *
-* <p>Bugs: (a list of bugs and / or other problems)
 *
 * @author Michael Leiby
 * @date January 17, 2023
