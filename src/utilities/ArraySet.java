@@ -126,7 +126,7 @@ public class ArraySet<E> implements List<E>, Set<E>
 
 	@Override
 	public ListIterator<E> listIterator() {
-		return listIterator();
+		return _list.listIterator();
 	}
 
 	@Override
