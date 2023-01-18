@@ -79,7 +79,8 @@ public class ParallelArrayDictionary<Key, Value> implements Map<Key, Value>
 	@Override
 	public void putAll(Map<? extends Key, ? extends Value> m) {
 		for (Entry<? extends Key, ? extends Value> entry : m.entrySet()) {
-			if (_keys.add(entry.getKey()) == true) {
+			if (_keys.add(entry.getKey())) {
+				// only add the value if the key is added successfully
 				_values.add(entry.getValue());
 			}
 		}
