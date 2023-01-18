@@ -58,8 +58,11 @@ public class ParallelArrayDictionary<Key, Value> implements Map<Key, Value>
 			return value;
 		}
 		
-		_keys.add(key);
-		_values.add(value);
+		if(_keys.add(key)) {
+			// only add value if key is added successfully
+			_values.add(value);
+		};
+
 		return value;
 	}
 
